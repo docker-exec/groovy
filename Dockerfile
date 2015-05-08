@@ -1,5 +1,6 @@
 FROM        debian:wheezy
 MAINTAINER  andystanton
+ENV         LANG C.UTF-8
 ENV         GROOVY_VERSION 2.4.3
 ENV         PATH $PATH:/opt/groovy/current/bin
 ENV         JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
