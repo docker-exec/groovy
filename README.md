@@ -1,12 +1,12 @@
-# Docker Exec Image: Groovy
+# Docker Exec Image: s
 
-A Dockerfile describing an container capable of executing Groovy source files.
+A Dockerfile describing an container capable of executing s source files.
 
 # Build
 
 ```sh
 git clone https://github.com/docker-exec/groovy.git
-docker build -t dexec/groovy .
+docker build -t dexec/lang-groovy .
 ```
 
 # Usage
@@ -16,7 +16,7 @@ In a directory containing a script e.g. foo.groovy, run:
 ```sh
 docker run -t --rm \
     -v $(pwd -P)/foo.groovy:/tmp/dexec/build/foo.groovy \
-    dexec/groovy foo.groovy
+    dexec/lang-groovy foo.groovy
 ```
 
 ## Passing arguments to the script
@@ -34,7 +34,7 @@ Each argument passed must be prefixed in this way, e.g.
 ```sh
 docker run -t --rm \
     -v $(pwd -P)/foo.groovy:/tmp/dexec/build/foo.groovy \
-    dexec/groovy foo.groovy \
+    dexec/lang-groovy foo.groovy \
     --arg='hello world' \
     --arg=foo \
     --arg=bar
